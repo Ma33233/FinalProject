@@ -175,15 +175,15 @@
                                     <segue destination="qKr-Tw-ymc" kind="unwind" unwindAction="backOrDismissWithSegue:" id="geI-Gc-G8d"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UId-Z9-YsC">
-                                <rect key="frame" x="63" y="282" width="83" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UId-Z9-YsC">
+                                <rect key="frame" x="63" y="282" width="79" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baK-4M-KbW">
-                                <rect key="frame" x="63" y="376" width="82" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baK-4M-KbW">
+                                <rect key="frame" x="63" y="376" width="41" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -221,15 +221,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fl-dS-19W">
-                                <rect key="frame" x="61" y="447" width="41" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Passowrd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fl-dS-19W">
+                                <rect key="frame" x="61" y="447" width="74" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yo-oe-g6e">
-                                <rect key="frame" x="61" y="541" width="74" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Re-Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yo-oe-g6e">
+                                <rect key="frame" x="61" y="541" width="101" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -258,17 +258,17 @@
                     </view>
                     <connections>
                         <outlet property="Note" destination="lVP-0g-g85" id="Yh6-ly-1bD"/>
-                        <outlet property="emailForgetTextEnter" destination="ICo-Gh-KjT" id="mau-KH-Wme"/>
-                        <outlet property="firstNameTextEnter" destination="I0W-2m-IIh" id="JfH-dK-4QU"/>
+                        <outlet property="RePasswordTextEnter" destination="HGX-zh-zsq" id="ixr-vv-AgP"/>
+                        <outlet property="UsernameTextEnter" destination="I0W-2m-IIh" id="JfH-dK-4QU"/>
+                        <outlet property="emailTextEnter" destination="sDS-8a-soC" id="6gA-RU-3uG"/>
                         <outlet property="labelBackOrDismiss" destination="72Z-FP-tiU" id="LN5-14-DfK"/>
-                        <outlet property="labelEmailTextForget" destination="9Fl-dS-19W" id="5pF-dL-aSo"/>
+                        <outlet property="labelEmail" destination="baK-4M-KbW" id="2Q9-Hp-wjL"/>
                         <outlet property="labelErorrDisplay" destination="3hD-gb-abh" id="4HB-EE-k8g"/>
-                        <outlet property="labelFirstName" destination="UId-Z9-YsC" id="bKi-2Y-nE9"/>
-                        <outlet property="labelLastName" destination="baK-4M-KbW" id="2Q9-Hp-wjL"/>
-                        <outlet property="labelPasswordTextForget" destination="2yo-oe-g6e" id="zDU-2Q-JUa"/>
-                        <outlet property="lastNameTextEnter" destination="sDS-8a-soC" id="6gA-RU-3uG"/>
+                        <outlet property="labelPassword" destination="9Fl-dS-19W" id="5pF-dL-aSo"/>
+                        <outlet property="labelRePassowrd" destination="2yo-oe-g6e" id="zDU-2Q-JUa"/>
+                        <outlet property="labelUsername" destination="UId-Z9-YsC" id="bKi-2Y-nE9"/>
                         <outlet property="logoImage" destination="hMl-OK-z0J" id="LW0-zM-Ec9"/>
-                        <outlet property="passwordForgetTextEnter" destination="HGX-zh-zsq" id="ixr-vv-AgP"/>
+                        <outlet property="passwordTextEnter" destination="ICo-Gh-KjT" id="mau-KH-Wme"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gc5-hW-jTe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

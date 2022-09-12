@@ -9,16 +9,16 @@ import UIKit
 
 class SginUpViewController: UIViewController {
     @IBOutlet weak var Note: UILabel!
-    @IBOutlet weak var labelEmailTextForget: UILabel!
+    @IBOutlet weak var labelPassword: UILabel!
     @IBOutlet weak var labelErorrDisplay: UILabel!
-    @IBOutlet weak var emailForgetTextEnter: UITextField!
-    @IBOutlet weak var firstNameTextEnter: UITextField!
+    @IBOutlet weak var passwordTextEnter: UITextField!
+    @IBOutlet weak var UsernameTextEnter: UITextField!
     @IBOutlet weak var logoImage: UIImageView!
-    @IBOutlet weak var labelPasswordTextForget: UILabel!
-    @IBOutlet weak var labelFirstName: UILabel!
-    @IBOutlet weak var passwordForgetTextEnter: UITextField!
-    @IBOutlet weak var labelLastName: UILabel!
-    @IBOutlet weak var lastNameTextEnter: UITextField!
+    @IBOutlet weak var labelRePassowrd: UILabel!
+    @IBOutlet weak var labelUsername: UILabel!
+    @IBOutlet weak var RePasswordTextEnter: UITextField!
+    @IBOutlet weak var labelEmail: UILabel!
+    @IBOutlet weak var emailTextEnter: UITextField!
     @IBOutlet weak var labelBackOrDismiss: UILabel!
     
     override func viewDidLoad() {
