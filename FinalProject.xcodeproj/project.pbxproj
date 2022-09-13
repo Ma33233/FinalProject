@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010FA23628D070D200FB75F4 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010FA23528D070D200FB75F4 /* MessageViewController.swift */; };
+		0198AD6828D06025009B2C9D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0198AD6728D06025009B2C9D /* ProfileViewController.swift */; };
 		01CBAEE128CF2B5C003A4ABA /* SginUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CBAEE028CF2B5C003A4ABA /* SginUpViewController.swift */; };
 		01CBAEE328CF3D1B003A4ABA /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CBAEE228CF3D1B003A4ABA /* ResetViewController.swift */; };
+		01CBAEE528CF5DBA003A4ABA /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CBAEE428CF5DBA003A4ABA /* SearchBarViewController.swift */; };
+		01CBAEE728CF5ECF003A4ABA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CBAEE628CF5ECF003A4ABA /* HomeViewController.swift */; };
 		444CAC2A28CF165100ED9FFD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 444CAC2928CF165100ED9FFD /* FirebaseAuth */; };
 		444CAC2C28CF165100ED9FFD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 444CAC2B28CF165100ED9FFD /* FirebaseDatabase */; };
 		444CAC2E28CF165100ED9FFD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 444CAC2D28CF165100ED9FFD /* FirebaseFirestore */; };
@@ -46,10 +50,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		010FA23528D070D200FB75F4 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		0198AD6728D06025009B2C9D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		01CBAEE028CF2B5C003A4ABA /* SginUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SginUpViewController.swift; sourceTree = "<group>"; };
 		01CBAEE228CF3D1B003A4ABA /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
+
+		01CBAEE428CF5DBA003A4ABA /* SearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewController.swift; sourceTree = "<group>"; };
+		01CBAEE628CF5ECF003A4ABA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+
 		444CAC3728CF2A0800ED9FFD /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		444CAC3A28D072CD00ED9FFD /* Database Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Database Manager.swift"; sourceTree = "<group>"; };
+
 		44D80CFA28CE13400094B001 /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D80CFD28CE13400094B001 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44D80CFF28CE13400094B001 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,7 +143,11 @@
 				44D80CFF28CE13400094B001 /* SceneDelegate.swift */,
 				44D80D0128CE13400094B001 /* LogInViewController.swift */,
 				44D80D0328CE13400094B001 /* Main.storyboard */,
+				0198AD6728D06025009B2C9D /* ProfileViewController.swift */,
+				01CBAEE628CF5ECF003A4ABA /* HomeViewController.swift */,
+				01CBAEE428CF5DBA003A4ABA /* SearchBarViewController.swift */,
 				01CBAEE228CF3D1B003A4ABA /* ResetViewController.swift */,
+				010FA23528D070D200FB75F4 /* MessageViewController.swift */,
 				44D80D0928CE134D0094B001 /* Assets.xcassets */,
 				44D80D0B28CE134D0094B001 /* LaunchScreen.storyboard */,
 				444CAC3A28D072CD00ED9FFD /* Database Manager.swift */,
@@ -302,15 +317,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
+				01CBAEE528CF5DBA003A4ABA /* SearchBarViewController.swift in Sources */,
+
 				44D80D0228CE13400094B001 /* LogInViewController.swift in Sources */,
 				444CAC3B28D072CD00ED9FFD /* Database Manager.swift in Sources */,
 				44D80CFE28CE13400094B001 /* AppDelegate.swift in Sources */,
 				44D80D0828CE13400094B001 /* FinalProject.xcdatamodeld in Sources */,
 				444CAC3828CF2A0800ED9FFD /* Utilities.swift in Sources */,
+
 				01CBAEE128CF2B5C003A4ABA /* SginUpViewController.swift in Sources */,
 				44D80D0228CE13400094B001 /* LogInViewController.swift in Sources */,
+				01CBAEE728CF5ECF003A4ABA /* HomeViewController.swift in Sources */,
+				010FA23628D070D200FB75F4 /* MessageViewController.swift in Sources */,
 				44D80CFE28CE13400094B001 /* AppDelegate.swift in Sources */,
 				44D80D0828CE13400094B001 /* FinalProject.xcdatamodeld in Sources */,
+				0198AD6828D06025009B2C9D /* ProfileViewController.swift in Sources */,
 				01CBAEE328CF3D1B003A4ABA /* ResetViewController.swift in Sources */,
 				44D80D0028CE13400094B001 /* SceneDelegate.swift in Sources */,
 			);
