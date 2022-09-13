@@ -6,16 +6,20 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    var window: UIWindow?
-
-
+    var window: UIWindow?    
+    let userDefault = UserDefaults.standard
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        if self.userDefault.object(forKey: "email") != nil
+            && self.userDefault.object(forKey: "password") != nil{
+            autoLogin()
+            print("22222")
+        }
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
@@ -50,6 +54,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
-
+    func autoLogin(){
+        let dbAuthRef = Auth.auth()
+            dbAuthRef.signIn(withEmail: userDefault.object(forKey: "email") as! String, password: userDefault.object(forKey: "password") as! String) { result, error in
+                print("3333")
+                        // check if there is in login process
+                        guard error == nil else{
+    //                        self.showError("Email/Password is invaild")
+                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                            let logInViewController: LogInViewController = storyboard.instantiateViewController(withIdentifier: "login") as! LogInViewController
+                            logInViewController.passwordChanged(error!.localizedDescription)
+                            self.window?.rootViewController = logInViewController
+                            print("44444")
+                            return
+                        }
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let homeViewController: ResetViewController = storyboard.instantiateViewController(withIdentifier: "A1") as! ResetViewController
+                self.window?.rootViewController = homeViewController
+                print("55555")
+                
+                
+            }}
 }
+
 

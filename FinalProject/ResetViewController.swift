@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ResetViewController: UIViewController {
     @IBOutlet weak var TipsOptional: UILabel!
@@ -13,10 +14,61 @@ class ResetViewController: UIViewController {
     @IBOutlet weak var labelErorrDisplay: UILabel!
     @IBOutlet weak var emailTextEnter: UITextField!
     @IBOutlet weak var labelEmail: UILabel!
+    
+    let dbAuthRef = Auth.auth()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupElements()
+
         
     }
     @IBAction func resetButten(_ sender: Any) {
+        sendingPassReset()
     }
+    
+    func setupElements(){
+        // Hide the error label
+        labelErorrDisplay.alpha = 0
+        labelErorrDisplay.textColor = .red
+        
+        // Styling elements
+        Utilities.styleTextField(emailTextEnter)
+    }
+    
+    func sendingPassReset(){
+        //        // Validates fields is in the way we want.
+               let checking =  validateFields()
+                guard checking == nil else {
+                    showError(checking!)
+                    return
+                }
+                
+        //         User Login
+        dbAuthRef.sendPasswordReset(withEmail: emailTextEnter.text!) { error in
+                    // check if there is an error creating the user
+                    guard error == nil else{
+                        self.showError("Email is invaild")
+                        return
+                    }
+                         }
+
+                
+    }
+    
+    func validateFields() -> String?{
+        guard emailTextEnter.text?.trimmingCharacters(in: .whitespacesAndNewlines) != "" else{
+            return "Please fill in email field"
+        }
+       return nil
+    }
+    
+    func showError(_ msg: String){
+    labelErorrDisplay.text = msg
+    labelErorrDisplay.alpha = 1
 }
+    
+
+}
+
+
