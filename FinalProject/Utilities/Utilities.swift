@@ -8,9 +8,9 @@
 
 import Foundation
 import UIKit
-
+import FirebaseFirestore
 class Utilities {
-    
+    static let dbAuthRef = Firestore.firestore()
     static func styleTextField(_ textfield:UITextField) {
         
         // Create the bottom line
@@ -32,7 +32,7 @@ class Utilities {
         
         // Filled rounded corner style
         button.backgroundColor = UIColor.init(red: 48/255, green: 173/255, blue: 99/255, alpha: 1)
-        button.layer.cornerRadius = 25.0
+        button.layer.cornerRadius = 16
         button.tintColor = UIColor.white
     }
     
@@ -47,13 +47,22 @@ class Utilities {
     
     static func isPasswordValid(_ password : String) -> Bool {
         
-        let password = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
-        return password.evaluate(with: password)
+        let passwordPred = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
+        return passwordPred.evaluate(with: password)
+    }
+    
+    static func isPasswordsMatched(_ password: String, _ rePassword: String) -> Bool{
+        return password == rePassword
     }
     
     static func isEmailValid(_ email: String) -> Bool{
-        let email = NSPredicate(format: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")
-        return email.evaluate(with: email)
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPred = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
     }
-    
-}
+        
+        
+        
+    }
+
+
