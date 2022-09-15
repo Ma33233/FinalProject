@@ -11,6 +11,8 @@ import FirebaseAuth
 class ResetViewController: UIViewController {
     @IBOutlet weak var TipsOptional: UILabel!
     
+    @IBOutlet weak var sendRequstBtn: UIButton!
+    @IBOutlet weak var resetView: UIView!
     @IBOutlet weak var labelErorrDisplay: UILabel!
     @IBOutlet weak var emailTextEnter: UITextField!
     @IBOutlet weak var labelEmail: UILabel!
@@ -20,6 +22,8 @@ class ResetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupElements()
+        resetView.layer.cornerRadius = 16
+        sendRequstBtn.layer.cornerRadius = 20
 
         
     }

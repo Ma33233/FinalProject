@@ -11,6 +11,8 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var noteForLogoOrAppName: UILabel!
     @IBOutlet weak var logoImageView: UIImageView!
     
+    @IBOutlet weak var signUpBtn: UIButton!
+    @IBOutlet weak var signInView: UIView!
     @IBOutlet weak var labelForSginUp: UILabel!
     @IBOutlet weak var labelForForgetPassword: UILabel!
     @IBOutlet weak var labelErorrDisplay: UILabel!
@@ -18,13 +20,16 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var labelForEmailEnter: UILabel!
     @IBOutlet weak var passwordTextEnter: UITextField!
     @IBOutlet weak var emailTextEnter: UITextField!
-    
+    @IBOutlet weak var signInBtn: UIButton!
     var isPasswordChanged = false
     var msgFromScene = ""
     let userDefault = UserDefaults.standard
     let dbAuthRef = Auth.auth()
     override func viewDidLoad() {
         super.viewDidLoad()
+        signInView.layer.cornerRadius = 40
+        signInBtn.layer.cornerRadius = 32
+        signUpBtn.layer.cornerRadius = 24
         setupElements()
         if isPasswordChanged{
             labelErorrDisplay.text = showPasswordError(msgFromScene)

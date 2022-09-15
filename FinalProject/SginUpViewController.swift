@@ -9,6 +9,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 class SginUpViewController: UIViewController {
+    @IBOutlet weak var signUpView: UIView!
     @IBOutlet weak var Note: UILabel!
     @IBOutlet weak var labelPassword: UILabel!
     @IBOutlet weak var labelErorrDisplay: UILabel!
@@ -29,6 +30,8 @@ class SginUpViewController: UIViewController {
     let db = Firestore.firestore()
     override func viewDidLoad() {
         super.viewDidLoad()
+        signUpView.layer.cornerRadius = 40
+        signUpBtn.layer.cornerRadius = 24
 
         setupElements()
     }
@@ -102,9 +105,9 @@ class SginUpViewController: UIViewController {
             return "Passwords did not match"
         }
         
-        guard Utilities.isUsernameUsed((UsernameTextEnter.text?.trimmingCharacters(in: .whitespacesAndNewlines))!) == false else{
-            return "Username is exist, use different username"
-        }
+//        guard Utilities.isUsernameUsed((UsernameTextEnter.text?.trimmingCharacters(in: .whitespacesAndNewlines))!) == false else{
+//            return "Username is exist, use different username"
+//        }
         
         return nil
     }
